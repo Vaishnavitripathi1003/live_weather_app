@@ -72,23 +72,107 @@ A beautiful Flutter weather application that provides real-time weather updates 
 ## 🏗️ Project Structure
 
 ```
-lib/
-├── core/
-│   ├── constants/
-│   ├── themes/
-│   └── utils/
-├── data/
-│   ├── models/
-│   ├── repositories/
-│   └── services/
-├── presentation/
-│   ├── bloc/
-│   │   ├── theme/
-│   │   └── weather/
-│   ├── providers/
-│   ├── screens/
-│   └── widgets/
-└── main.dart
+live_weather_app/
+│
+├── 📁 android/                          # Native Android code
+├── 📁 ios/                              # Native iOS code
+├── 📁 lib/                              # Main source code
+│   │
+│   ├── 📁 core/                         # Core functionality
+│   │   ├── 📁 constants/                 
+│   │   │   ├── api_constants.dart        # API URLs, timeouts
+│   │   │   └── app_constants.dart        # App version, spacing, fonts
+│   │   │
+│   │   ├── 📁 routes/                    
+│   │   │   ├── app_routes.dart           # Route names
+│   │   │   └── route_generator.dart      # Route generator
+│   │   │
+│   │   ├── 📁 theme/                      
+│   │   │   ├── app_colors.dart           # Color palette
+│   │   │   └── app_theme.dart            # Light/Dark theme
+│   │   │
+│   │   └── 📁 utils/                     
+│   │       ├── connectivity_helper.dart   # Internet check
+│   │       ├── date_formatter.dart        # Date formatting
+│   │       ├── location_helper.dart       # Location services
+│   │       └── responsive_helper.dart     # Responsive sizing
+│   │
+│   ├── 📁 data/                          # Data layer
+│   │   ├── 📁 datasources/                
+│   │   │   ├── quote_remote_datasource.dart
+│   │   │   └── weather_remote_datasource.dart
+│   │   │
+│   │   ├── 📁 models/                     
+│   │   │   ├── forecast_model.dart
+│   │   │   ├── quote_model.dart
+│   │   │   └── weather_model.dart
+│   │   │
+│   │   ├── 📁 repositories/                
+│   │   │   ├── quote_repository.dart
+│   │   │   ├── quote_repository_interface.dart
+│   │   │   ├── weather_repository.dart
+│   │   │   └── weather_repository_interface.dart
+│   │   │
+│   │   └── 📁 services/                   
+│   │       ├── api_service.dart           # API calls
+│   │       ├── dio_client.dart             # Dio configuration
+│   │       └── network_exception.dart      # Error handling
+│   │
+│   ├── 📁 presentation/                   # UI layer
+│   │   ├── 📁 bloc/                        # BLoC state management
+│   │   │   ├── 📁 quote/
+│   │   │   │   ├── quote_bloc.dart
+│   │   │   │   ├── quote_event.dart
+│   │   │   │   └── quote_state.dart
+│   │   │   │
+│   │   │   ├── 📁 theme/
+│   │   │   │   ├── theme_bloc.dart
+│   │   │   │   ├── theme_event.dart
+│   │   │   │   └── theme_state.dart
+│   │   │   │
+│   │   │   └── 📁 weather/
+│   │   │       ├── weather_bloc.dart
+│   │   │       ├── weather_event.dart
+│   │   │       └── weather_state.dart
+│   │   │
+│   │   ├── 📁 providers/                   # Provider state management
+│   │   │   └── 📁 home/
+│   │   │       ├── home_provider.dart
+│   │   │       └── home_state.dart
+│   │   │
+│   │   ├── 📁 screens/                     # All screens
+│   │   │   ├── about_screen.dart
+│   │   │   ├── home_screen.dart
+│   │   │   ├── search_screen.dart
+│   │   │   └── splash_screen.dart
+│   │   │
+│   │   └── 📁 widgets/                      # Reusable widgets
+│   │       ├── app_drawer.dart
+│   │       ├── custom_error_widget.dart
+│   │       ├── empty_state.dart
+│   │       ├── forecast_card.dart
+│   │       ├── glassmorphism_card.dart
+│   │       ├── loading_widget.dart
+│   │       ├── quote_card.dart
+│   │       ├── weather_card.dart
+│   │       └── weather_chip.dart
+│   │
+│   └── main.dart                            # App entry point
+│
+├── 📁 screenshot/                          # App screenshots
+│   ├── about_us.jpg
+│   ├── drawer.jpg
+│   ├── no_internet_dark.jpg
+│   ├── no_intetnet_light.jpg
+│   ├── rating.jpg
+│   ├── rating2.jpg
+│   ├── search_screen_dark.jpg
+│   ├── weather_screen.jpg
+│   └── weather_screen_dark.jpg
+│
+├── .gitignore                              # Git ignore rules
+├── pubspec.yaml                            # Dependencies
+└── README.md                               # Project documentation
 ```
 
 ## 🎯 Key Features Explained
