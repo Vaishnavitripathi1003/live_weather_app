@@ -14,21 +14,24 @@ A beautiful Flutter weather application that provides real-time weather updates 
 
 ## 📸 Screenshots
 
+## 📸 Screenshots
+
 <div align="center">
-  <img src="screenshot/weather_screen.jpg" width="200" alt="Weather Screen Light Mode">
-  <img src="screenshot/weather_screen_dark.jpg" width="200" alt="Weather Screen Dark Mode">
+  <img src="screenshot/weather_screen.jpg" width="200" alt="Weather Screen Light">
+  <img src="screenshot/weather_screen_dark.jpg" width="200" alt="Weather Screen Dark">
   <img src="screenshot/search_screen_dark.jpg" width="200" alt="Search Screen">
 </div>
 
 <div align="center">
   <img src="screenshot/drawer.jpg" width="200" alt="Navigation Drawer">
-  <img src="screenshot/about_us.jpg" width="200" alt="About Screen">
   <img src="screenshot/rating.jpg" width="200" alt="Rating Dialog">
+  <img src="screenshot/rating2.jpg" width="200" alt="Rating Dialog 2">
 </div>
 
 <div align="center">
   <img src="screenshot/no_intetnet_light.jpg" width="200" alt="No Internet Light">
   <img src="screenshot/no_internet_dark.jpg" width="200" alt="No Internet Dark">
+  <img src="screenshot/about_us.jpg" width="200" height="400" alt="About Screen">
 </div>
 
 ## 🚀 Tech Stack
